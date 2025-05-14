@@ -17,7 +17,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copia o JAR gerado do estágio de build
-COPY --from=build /app/target/order-hub-0.0.1-SNAPSHOT.jar ./notification-order-hub.jar
+COPY --from=build /app/target/notification-order-hub-0.0.1-SNAPSHOT.jar ./notification-order-hub.jar
 
 # Configurações do Spring Boot
 ENV SPRING_PROFILES_ACTIVE=prod
