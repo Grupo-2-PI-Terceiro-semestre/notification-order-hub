@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>sptech</groupId>
-    <artifactId>notification</artifactId>
+    <artifactId>notification-order-hub</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>notification-order-hub</name>
-    <description>notification</description>
+    <description>notification-order-hub</description>
     <url/>
     <licenses>
         <license/>
