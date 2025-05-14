@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: jonathancarvalho039/notification-order-hub:latest
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      QUEUE_NAME: notification-orderhub
+      AWS_SECRET_ACCESS_KEY:
+      AWS_ACCESS_KEY_ID: AKIA3FRRJEMNRYCSBOW3
+      AWS_REGION: us-east-1
+    ports:
+      - "8080:8080"
