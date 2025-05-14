@@ -11,7 +11,7 @@
     <groupId>sptech</groupId>
     <artifactId>notification</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>notification</name>
+    <name>notification-order-hub</name>
     <description>notification</description>
     <url/>
     <licenses>
@@ -67,6 +67,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>notification-order-hub</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -74,5 +75,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
