@@ -9,17 +9,15 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class NotificationConsumer {
-
-
+public class Listener {
 
     private final SimpMessagingTemplate messagingTemplate;
 
-    public NotificationConsumer(SimpMessagingTemplate messagingTemplate) {
+    public Listener(SimpMessagingTemplate messagingTemplate) {
         this.messagingTemplate = messagingTemplate;
     }
 
-    @SqsListener(value = "${aws.sqs.queue.name}")
+    @SqsListener("notification-orderhub")
     public void consumer(String messageJson) throws JsonProcessingException {
         try {
             log.info("##############################################");
