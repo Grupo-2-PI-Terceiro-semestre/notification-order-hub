@@ -1,6 +1,6 @@
 package sptech.notification.queue;
 
-public record MessageEmpresa(
+public record MenssagemEmpresa(
         String empresaId,
         String mensagem
 ) {

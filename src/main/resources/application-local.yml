@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: order-hub-notification
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/orderhub
+    username: root
+    password: jhow
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  address: 0.0.0.0
+  port: 8585
