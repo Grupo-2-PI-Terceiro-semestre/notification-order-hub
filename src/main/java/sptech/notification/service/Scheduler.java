@@ -1,5 +1,6 @@
 package sptech.notification.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import sptech.notification.entity.AcaoNotificacao;
@@ -8,6 +9,7 @@ import sptech.notification.repository.AcaoNotificacaoRepository;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class Scheduler {
 
@@ -29,6 +31,9 @@ public class Scheduler {
                             acao.getMensagem())
             );
             marcarNotificacaoComoEnviada(acao);
+            log.info("####################################################");
+            log.info("Notificação enviada com sucesso para a empresa: {}", acao.getEmpresa().getIdEmpresa());
+            log.info("####################################################");
         }
     }
 
