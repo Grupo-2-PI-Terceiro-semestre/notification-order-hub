@@ -17,12 +17,8 @@ public class Notification {
     }
 
     public void sendNotification(MenssagemEmpresa message) {
-        log.info("########################################");
-        log.info("Enviando notificação para a empresa: {}", message.empresaId());
-        log.info("########################################");
         String destino = "/topic/" + message.empresaId() + "/notifications";
         messagingTemplate.convertAndSend(destino, message.mensagem());
-        log.info("Notificação enviada com sucesso.");
     }
 
 }

@@ -21,7 +21,7 @@ public class Scheduler {
         this.acaoNotificacaoRepository = acaoNotificacaoRepository;
     }
 
-    @Scheduled(fixedRate = 2000)
+    @Scheduled(fixedRate = 1000)
     public void enviarNotificacoes() {
         List<AcaoNotificacao> notificacoesNaoEnviadas = acaoNotificacaoRepository.buscarListaNoficacaoNaoEnviadaPorEmpresaId();
         for (AcaoNotificacao acao : notificacoesNaoEnviadas) {
@@ -31,9 +31,6 @@ public class Scheduler {
                             acao.getMensagem())
             );
             marcarNotificacaoComoEnviada(acao);
-            log.info("####################################################");
-            log.info("Notificação enviada com sucesso para a empresa: {}", acao.getEmpresa().getIdEmpresa());
-            log.info("####################################################");
         }
     }
 
