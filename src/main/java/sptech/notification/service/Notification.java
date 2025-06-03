@@ -3,7 +3,7 @@ package sptech.notification.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
-import sptech.notification.queue.MenssagemEmpresa;
+import sptech.notification.dto.MenssagemEmpresa;
 
 
 @Slf4j

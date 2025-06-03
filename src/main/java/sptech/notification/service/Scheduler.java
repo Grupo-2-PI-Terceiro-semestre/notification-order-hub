@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import sptech.notification.entity.AcaoNotificacao;
-import sptech.notification.queue.MenssagemEmpresa;
+import sptech.notification.dto.MenssagemEmpresa;
 import sptech.notification.repository.AcaoNotificacaoRepository;
 
 import java.util.List;

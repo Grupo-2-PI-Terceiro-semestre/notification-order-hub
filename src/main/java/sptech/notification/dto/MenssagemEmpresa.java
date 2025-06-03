@@ -1,4 +1,4 @@
-package sptech.notification.queue;
+package sptech.notification.dto;
 
 public record MenssagemEmpresa(
         String empresaId,
