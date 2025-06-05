@@ -88,4 +88,4 @@ jobs:
           sudo docker rm -f ms-notification || true
           sudo docker rmi jonathancarvalho039/notification-order-hub || true
           sudo docker pull jonathancarvalho039/notification-order-hub
-          sudo docker run --name ms-notification -p -d 8080:8080  -e DATA_BASE_URL="jdbc:mysql://order-hub-db.cy356uxitvhj.us-east-1.rds.amazonaws.com:3306/order_hub?allowPublicKeyRetrieval=true&sslMode=DISABLED&serverTimezone=UTC" -e DATA_BASE_USERNAME=orderhub  -e DATA_BASE_PASSWORD=orderhub jonathancarvalho039/notification-order-hub
+          sudo docker run --name ms-notification -p 8080:8080 -d -e DATA_BASE_URL="jdbc:mysql://order-hub-db.cy356uxitvhj.us-east-1.rds.amazonaws.com:3306/order_hub?allowPublicKeyRetrieval=true&sslMode=DISABLED&serverTimezone=UTC" -e DATA_BASE_USERNAME=orderhub  -e DATA_BASE_PASSWORD=orderhub jonathancarvalho039/notification-order-hub
